@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root{
+    --cor-fundo: #222831;
+    --cor-principal: #DDDDDD;
+    --cor-destaque: #F05454;
+    --font-principal: "Nunito Sans", sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-principal);
+    font-family: var(--font-principal);
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    background-color: var(--cor-principal);
+    text-align: center;
+    padding: 1px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--cor-fundo);
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-fundo);
+    margin: 0 2rem 1rem 0;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    transform: scale(0.9);
+    transition: transform 0.1s;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo);
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.graficos-container{
+    margin: 5rem;
+}
+
+.grafico{
+    margin-top: 5rem;
+}
+
+
+.graficos-container__texto{
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 2rem;
+    border: var(--cor-destaque) solid 2px;
+}
+
+span {
+    font-weight: bold;
+    color: var(--cor-destaque)
+}

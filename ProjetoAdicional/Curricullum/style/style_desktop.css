@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+:root {   
+    --fundo-branco: #FFFFFF;
+    --texto-preto: #000000;
+}
+
+@media screen and (min-width: 1024px) {
+
+    img {
+        width: 200px;
+        height: 340px;
+        padding: 34px 10px 0px 62px;
+        z-index: 99;
+    }
+
+    body {
+        color: var(--texto-preto);
+        font-family: var(--fonte-principal);
+        font-size: 32px;
+        min-width: 360px;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    h3 {
+        font-size: 48px;
+    }
+    
+    h2 {
+        text-align: left;
+        padding-left: 10px;
+        color: var(--texto-principal)
+    }
+
+
+    .nome {
+        width: 100%;
+        padding-top: 34px;
+        text-align: left;
+    }
+
+    header {
+        position: static;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 180px;
+        left: 280px;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        background-color: var(--fundo-principal);
+        padding: 0px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .gatilho-menu-hamburguer, .menu-hamburguer {
+        display: none;
+    }
+
+    .fundo-branco {
+        position: static;
+        top: 235px;
+        background-color: var(--fundo-branco);
+        height: 100%;
+        padding:  0 0 200px 290px;
+    }
+    
+    .h3-principal {
+        padding: 10px 0 10px 20px;
+    }
+
+    .h3-secundario {
+        padding: 30px 0 10px 20px;
+    }
+
+    p {
+        height: auto;
+        padding-left: 20px;
+    }
+
+    .redes{
+        display: flex;
+        align-items: center;
+    }
+
+    footer {
+        position: static;
+        flex-direction: row;
+        color: var(--texto-principal);
+        justify-content: space-between;
+
+    }
+}

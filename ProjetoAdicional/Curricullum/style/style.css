@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+:root {
+    --texto-principal: #FFFFFF;
+    --texto-destaque: #FF0000;
+    --fundo-principal: #000000;
+    --fundo-rodape: #2B2B2B;
+    --fundo-menu: #4D4D4D;
+
+    --fonte-principal: "Forum", serif;
+    --fonte-destaque: "Fredericka the Great", serif;
+}
+
+* {
+    margin: 0
+}
+
+nav_bar {
+    display: none;
+}
+
+.cabecalho {
+    display: flex;
+}
+
+.nome {
+    width: 380px;
+    text-align: center;
+}
+
+body {
+    background-color: var(--fundo-principal);
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 21px;
+    min-width: 360px;
+}
+
+footer {
+    background-color: var(--fundo-rodape);
+    font-size: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+}
+
+img {
+    width: 100px;
+    height: 170px;
+    padding: 10px 0px 0px 10px;
+}
+
+h1, h3 {
+    font-family: var(--fonte-destaque);
+    color: var(--texto-destaque);
+    font-size: 44px;
+    font-weight: 200;
+    text-align: left;
+    padding-left: 10px;
+}
+
+h2 {
+    font-family: var(--fonte-destaque);
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    padding-top: 10px;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 245px;
+}
+
+.h3-principal {
+    padding-top: 190px;
+}
+
+.h3-secundario {
+    padding-top: 50px;
+}
+
+
+.gatilho-menu-hamburguer {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+    width: 33px;
+    height: 33px;
+    opacity: 0;
+    cursor: pointer;
+    margin: 0;
+}
+
+.menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    width: 25px;
+    background-color: var(--fundo-menu);
+    padding: 6px 4px;
+}
+
+.menu-hamburguer span {
+    background-color: var(--fundo-principal);
+    height: 3px;
+    width: 100%;
+    transition: all ease 300ms;
+}
+
+.nav-links {
+    position: absolute;
+    z-index: 98;
+    top: -320px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--fundo-menu);
+    width: 180px;
+    height: 264px;
+    padding: 10px 10px 10px 20px;
+    transition: all ease 600ms;
+}
+
+.nav-links-link {
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 21px;
+    text-decoration: none;
+}
+
+.nav-links-link:hover {
+    color: var(--texto-destaque)
+}
+
+ul {
+    list-style: none;
+}
+
+.gatilho-menu-hamburguer:checked ~ .menu-hamburguer span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg);
+    translate: 4px 1px;
+    
+}
+
+.gatilho-menu-hamburguer:checked ~ .menu-hamburguer span:nth-child(2) {
+    opacity: 0;
+}
+
+.gatilho-menu-hamburguer:checked ~ .menu-hamburguer span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg);
+    translate: 4px -1px;
+    
+    
+}
+
+.gatilho-menu-hamburguer:checked ~ .nav-links {
+    top: 0px;
+}
+
+.campo{
+    padding: 20px 0 0 20px;
+    font-weight: 800;
+}
+
+.dado{
+    padding-left: 30px;
+}
+
+.icone-redes {
+    width: 70px;
+    height: 70px;
+}
+
+.icones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.experiencia{
+    padding-bottom: 100px;
+}

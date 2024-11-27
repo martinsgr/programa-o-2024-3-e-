@@ -1,0 +1,220 @@
+<!-- Esse conjunto de caracteres:
+    
+    "<" menor "!" exclamação "--" hífen hífen
+    
+    nesta ordem, é utilizado para abrir comentários
+    tudo o que estiver entre ele não será lido como HTML
+    e ficará apenas no código.
+    
+    Para fechar o comentário utiliza-se:
+    
+    "--" hífen hífen e ">" maior
+-->
+
+
+<!-- Objetivo pedagógico:
+    
+    Com o Objetivo de auxiliar no aprendizado esse HTML estára recheado de comentários
+    utilizando uma técnica, que eu gosto muito, para facilitar o aprendizado,
+    trata-se do  O QUE? POR QUÊ? COMO?.
+    De trechos em trechos de código haverá o conjunto:
+        "O que?" que diz o que se quer com o trecho a seguir;
+        "Por quê" que explica o porquê se deve fazer isso;
+        "Como " que traz alguns detalhes de como se faz esse preocesso.
+-->
+
+
+<!-- OBJETIVO 1
+    O QUE?
+        Identificar o tipo de arquivo e detalhes do HEAD
+    
+    POR QUE?
+        Para uma página ser corretamente lida e interpretada pelos diferentes navegadores 
+        é importante que esteja adequadamente codificada, então as informações do tipo do 
+        arquivo e o head são essenciais.
+
+        O DOCTYPE identifca que é um html
+        O lang identifica qual é o idioma que está sendo utilzado no conteúdo - importante para auxiliar 
+        os navegadores com as questões de tradução, no nosso caso o "pt-br" quer dizer 
+        "português do Brasil"
+        O Head traz informações adicionais que auxiliam, configuram, direcionam e personalizam elementos do navegador
+        O charset é referente ao conjunto de caracteres que será utilizado como por exemplo alfabeto árabe, latino, chinês, sirílico
+        O name e content são referentes a informações que nomeiam e delimitam o dispositivo que está sendo utilizado.
+        O title é o nome que aparece na aba do navegador (é possivel se inserir um icone também)
+        o Link é uma instrução para associar a este html algum arquivo externo - neste caso a relação (rel) é de uma folha de estilos
+        um arquivo css que vai alterar a estética da página, e o href é o local (caminho) em que este arquivo se encontra, ou seja, 
+        o arquivo "style.css" que está na pasta style, que está no mesmo diretório do nosso html;
+
+    COMO?
+        Essas informações podem ser digitadas uma a uma, mas esse procedimento é tão corriqueiro que a maioria dos editores de
+        código possuem atalhos para a inserção no VS Code basta digitar "html:5" e ele insere as tags html, head e body
+        identadas e com fechamento - muito prático.
+-->
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anakin Skywalker</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style_desktop.css">
+</head>
+
+<!-- OBJETIVO 2
+    O QUE?
+        Estrurar o conteudo a ser exibido no corpo da página - o BODY -  "a partir do protótipo";
+    POR QUE?
+        Não basta inserir o conteudo, é preciso que este seja organizado, dentro das seções, parágrafos,
+        listas, colunas, cabeçalho, rodapé, barras de navegação, blocos de conteudo, e por ai vai...
+        É aqui que se demostra a capacidade de criação do programador (desenvolvedor). Hávera inumeras
+        maneiras de se construir uma página e todas terão os mesmos resultados estéticos, porém há
+        escolhas que facilitarão a integração, a manutenção e compartilhamento do código.
+
+        Inúmeras tags serão utilizadas e apresentadas a partir de agora mas o conceito fundamental é de:
+        
+        Abrir e fechar a tag <h2> h2 Abre e /h2 Fecha </h2> - por exemplo para um texto em destaque
+        
+        ou 
+
+        Tags que fecham em si mesmas como a de imagem exemplo <img scr="caminho da imagem">
+
+
+    COMO?
+        Se conhecer o protótipo é fundamental, entender os elementos de uma página é igualmente
+        e em geral há alguns elementos que se repetem e seguem um padrão - não é uma regra mas
+        uma convenção amplamente aceita o uso das tags em língua inglesa:
+
+        Esse é um modelo bastante utilizado para vizualização em tablets e desktops
+         __________________________________________________________
+        | Cabeçalho <header>                                       |
+        |__________________________________________________________|
+        | Barra de navegação ou de links <nav_bar>                 |
+        |__________________________________________________________|
+        |               |                                          |
+        | Menu lateral  |     Conteúdo geralmente dividido         |
+        | <a_side>      |     em seções    <section>               |
+        |               |                                          |
+        |               |                                          |
+        |               |                                          |
+        |               |                                          |
+        |               |                                          |
+        |_______________|__________________________________________|
+        | Rodapé <footer>                                          |
+        |__________________________________________________________|
+
+        A mesma página em dispositivos móveis, por exemplo, poderia ocultar apenas os menus e barras de navegação:
+         ___________________________
+        | Cabeçalho      <nav_bar>  |
+        | <header>        oculto    |
+        |___________________________|
+        | <a_side> oculto           |
+        |___________________________|
+        |                           |
+        |  Conteúdo geralmente      |
+        |  dividido em seções       |
+        |    <section>              |
+        |                           |
+        |                           |
+        |                           |
+        |                           |
+        |                           |
+        |___________________________|
+        | Rodapé <footer>           |
+        |___________________________|
+
+        Abaixo uma lista com algumas das principais tags e seus usos:
+
+        div - é uma divisão é muito utilizada para criar organização para distribuição dos elementos,
+        seja no FlexBox ou Grid (veremos no CSS mais a frente)
+        h1, h2, h3 - são destaques "highlights" que trazem algumas configurações prontas, sem a necessidade
+        de indicação no CSS. O h1 é considerado o mais importante e "deve", em geral,
+        aparecer uma única vez em cada página, quanto maior o número, menos o nível de destaque;
+        ol e ul - são relacionados a listas, ordended e unordened, com e sem ordem - o que altera o 
+        tipo de marcador.
+        li - list item - está relacionado as listas, ol e ul, é cada item de uma lista
+        section - é usado para separar seções de conteúdo
+        a - ou ancora - geralmente usado para criar um ponto onde o usuário ao clicar é direcionado a
+        outro ponto, ou outra página.
+        header - é o cabeçalho, em geral traz a parte superior com a estrutura que caracteriza o site
+        nav-bar ou nav_bar - são barras de navegação, que permitem navegar dentro do próprio site uma variação
+        é o uso da barra lateral neste caso pode-se usar as tags a_side ou side_bar
+        footer - é o rodapé e quase sempre traz as informações do criador, desenvolvedor, ou da empresa,
+        como links para redes sociais, acesso aos contatos entre outros
+        
+        input - o input é uma referência a uma entrada, isto é, se queremos que o usuário faça alguma
+        interação podemos utilizar o input que pode ser de diferentes tipos:
+            button - um botão
+            checkbox - uma caixa de checagem
+            color - abre uma caixa de seleção de cor
+            date, datetime - campos para escolher uma data, ou preencher e validar 
+            (ainda exitem os campos day, mounth, week, year que valida as informações campo a campo)
+            email - uma caixa de texto que recebe e válida um endereço de e-mail
+            file - abre uma caixa de seleção de arquivo para envio
+            password - abre um campo para digitação de senha (que oculta os caracteres)
+            radio - um ponto de seleção, normalmente é utilizado quando há opções e o usuário deve
+            escolher apenas 1.
+            range - é um seletor deslizante
+            reset - um botão de redefinir
+            search - uma barra de texto para pesquisa
+            submit - um botão de enviar
+            tel - uma caixa de texto que recebe e válida um número de telefone
+            text - uma caixa de texto
+            time - um seletor de horário
+            url - uma caixa de texto que recebe e válida uma localização na internet
+-->
+
+
+<body>
+
+    <header class="cabecalho">
+        <img src="img/AS_home.jpg">
+        <div class="nome">
+            <h1>Anakin Skywalker</h1>
+            <h2>( Darth Vader )</h2>
+        </div>
+    </header>
+    
+    <div>
+        <input type="checkbox" class="gatilho-menu-hamburguer">  
+        
+        <div class="menu-hamburguer">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a class="nav-links-link" href="index.html">Sobre mim</a>
+            </li>
+            <li>
+                <a class="nav-links-link" href="dados.html">Dados Pessoais</a>
+            </li>
+            <li>
+                <a class="nav-links-link" href="formacao.html">Formação e Habilidades</a>
+            </li>
+            <li>
+                <a class="nav-links-link" href="experiencia.html">Experiência Profissional</a>
+            </li>
+        </ul>
+    </div>    
+    
+    <section class="fundo-branco">
+        <h3 class="h3-principal">Sobre mim</h3>
+        <p>Nasci como um escravo em Tatooine, e desde muito pequeno demostrei habilidades com manutenção de dispositivos e máquinas, mecânicas ou eletrônicas, conseguindo aprender de forma muito rápida sobre tecnologias alienígenas, era muito bom na manutenção de robôs, drones e ciborgues.
+            Como possuia reflexos rápidos, meu senhorio, me promoveu a piloto em “corridas de pods”,  que eram promovidas ilegalmente, nos desertos de Tatooine.
+            Após acreditarem que eu era um Jedi, que foi profetizado para equilibrar a Força, rapidamente fui integrado a Ordem dos Cavaleiros Jedi, onde fui treinado pelo Mestre Obi-Wan-Kenobi.
+            Após algumas “divergências” com a Ordem, e um “acidente de trabalho” envolvendo meu mestre, precisei passar por um “tratamento de saúde” que me tornou mais ciborgue do que humano, optei por encerrar meu ciclo na instituição e começar uma nova e desafiadora função, me juntando ao Lado Negro da Força e assumindo o posto de Lorde Sith, passando a ser mais conhecido como Darth Vader, e onde permanaci por mais de duas décadas, com total dedicação aos propósitos do Império Galáctico.
+            Sou casado, secretamente, com  Padmé Amidala, rainha do Planeta Naboo e Senadora da República Galática, e tenho dois filhos Luke e Lea.
+        </p>
+    </section>
+    <footer>
+        <f>Design: Elves Schweppe</f>
+        <f>site com o objetivo educacional </f>
+        <f>Disciplina - Pensamento Computacional</f>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+:root{
+    --cor-texto-titulo: #EBE600;
+    --cor-texto-principal: #FFFFFF ;
+    --cor-texto-destaque: #AADDFF ;
+    --fonte-principal: "Tilt Neon", sans-serif;
+    --fonte-secundaria: "Nerko One", cursive;
+    --cor-t3: #FF0000;
+    --cor-t2: #FF5500;
+    --cor-t1: #FFAA00;
+
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: linear-gradient(#8A2BE2, #4B0082, #000000, #000000);
+    text-align: center;
+    color: var(--cor-texto-principal);
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+}
+
+h1{
+    font-size: 40px;
+}
+.identificacao {
+    margin: 60px;
+}
+
+.titulo{
+    color: var(--cor-texto-titulo);
+    font-family: var(--fonte-principal)
+}
+
+.t1{
+    color: var(--cor-t1);
+}
+
+.t2{
+    color: var(--cor-t2);
+}
+
+.amostra_projeto {
+    width: 30vh;
+}
+
+.projetos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin: 40px;
+}
+
+.link-ancora, a {
+    text-decoration: none;
+    color: var(--cor-texto-destaque);
+}
+
+footer{
+    margin: 15px 0;
+}
